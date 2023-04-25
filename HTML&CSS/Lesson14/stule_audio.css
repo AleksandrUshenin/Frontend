@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box-audio{
+    margin-top: 80px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.audio-style{
+    width: 50%;
+}
+.box-video{
+    width: 100vw;
+    height: 85vh;
+    gap: 30px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.video-controls{
+    width: 70%;
+    height: 50%;
+}
+.box{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background-color: #d40b0b;
+    border-radius: 20px;
+    margin-bottom: 200px;
+}
+.text{
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    z-index: 1;
+    width: 100%;
+}
+.global-box{
+    display: flex;
+    justify-content: center;
+}
