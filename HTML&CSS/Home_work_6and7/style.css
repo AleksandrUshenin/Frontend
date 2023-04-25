@@ -166,9 +166,18 @@
   .goods_image{
       width: 100%;
   }
- }@media (max-width: 767px){
+ }@media (min-width: 320px) and (max-width: 767px){
+   .header{
+      justify-content: space-between;
+   }
    .label {
-      gap: 10%;
+      padding-top: 148px;
+      padding-bottom: 148px;
+      gap: 0;
+      justify-content: center;
+  }
+  .label_img{
+   display: none;
   }
   .center {
    padding-left: 3%;
@@ -178,16 +187,19 @@
       width: 45%;
    }
    .label_text {
-      width: 45%;
+      width: 70%;
       gap: 5%;
    }
    .text_image {
-      width: 80%;
+      width: 100%;
    }
    .goods_shop {
       grid-template-columns: 100%;
   }
   .goods_image{
     width: 100%;
+  }
+  .menu2, .menu3{
+   display: none;
   }
  }
