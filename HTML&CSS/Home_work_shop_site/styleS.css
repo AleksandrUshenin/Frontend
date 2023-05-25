@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,11 @@
 a {
   text-decoration: none;
   color: #000000;
+}
+
+li {
+  list-style-type: none;
+  /* Убираем маркеры */
 }
 
 .text {
@@ -23,6 +29,7 @@ a {
   align-items: center;
   justify-content: space-around;
   padding: 18px 0;
+  position: relative;
 }
 .header_search {
   gap: 41px;
@@ -38,6 +45,56 @@ a {
 }
 .header_menu_hover:hover > a > svg > path {
   fill: #F16D7F;
+}
+.header_menu_hover:hover label svg path {
+  fill: #F16D7F;
+}
+
+.box-content {
+  overflow: hidden;
+}
+
+#burger {
+  display: none;
+}
+#burger:checked ~ .nav_burger {
+  right: 0;
+}
+
+.nav_burger {
+  background: #FFFFFF;
+  width: 232px;
+  padding: 32px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 79px;
+  right: 0;
+  right: -232px;
+  transition: right 0.3s;
+}
+.nav_burger h3 {
+  padding-bottom: 4px;
+}
+.nav_burger h4 {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  color: #F16D7F;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.nav_burger li a {
+  padding: 3px 0 3px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
+.nav_burger li a:hover {
+  color: #F16D7F;
+}
+.nav_burger .nav_ref {
+  display: block;
 }
 
 .label {
@@ -116,7 +173,7 @@ a {
 }
 
 .footer {
-  color: #F26376;
+  color: #F16D7F;
   text-decoration: none;
   margin-bottom: 61px;
   display: flex;
@@ -125,7 +182,7 @@ a {
 }
 .footer_ref {
   padding: 14px 39px;
-  border: 1px solid #FF6A6A;
+  border: 1px solid #F16D7F;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -215,7 +272,7 @@ a {
   border: none;
   border-radius: 0 15px 15px 0;
   height: 50px;
-  background: #E05C6E;
+  background: #F16D7F;
   color: #FFFFFF;
   padding: 7px;
 }

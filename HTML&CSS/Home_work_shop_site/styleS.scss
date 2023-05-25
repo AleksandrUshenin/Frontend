@@ -1,3 +1,4 @@
+@import 'variables';
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +9,10 @@ a{
     text-decoration: none;
     color: #000000;
  }
+ li {
+  list-style-type: none;
+  /* Убираем маркеры */
+}
 .text{
     display: flex;
     flex-direction: column;
@@ -20,6 +25,7 @@ a{
     align-items: center;
     justify-content: space-around;
     padding: 18px 0;
+    position: relative;
 
     &_search{
         gap: 41px;
@@ -34,8 +40,56 @@ a{
          gap: 33px;
      }
      &_menu_hover:hover > a > svg > path{
-        fill:#F16D7F ;
+        fill:$ColorObjectSite ;
       }
+      &_menu_hover:hover label svg path{
+        fill:$ColorObjectSite;
+      }
+}
+.box-content{
+  overflow: hidden;
+}
+#burger{
+  display: none;
+  &:checked ~ .nav_burger{
+    right: 0;
+  }
+}
+.nav_burger{
+  background: #FFFFFF;
+  width: $WidthNav_burger;
+  padding: 32px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 79px;
+  right: 0;
+  right: -$WidthNav_burger;
+  transition: right .3s;
+
+  & h3 {
+    padding-bottom: 4px;
+  } 
+  & h4 {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    color: $ColorObjectSite;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  & li a {
+    padding: 3px 0 3px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+  }
+  & li a:hover {
+    color: $ColorObjectSite;
+  }
+  .nav_ref{
+    display: block;
+  }
 }
 .label{
     background: #F1E4E6;
@@ -109,11 +163,11 @@ a{
         color: #5D5D5D;
      }
      &_cost{
-        color: #F16D7F;
+        color: $ColorObjectSite;
      }
   }
   .footer{
-    color: #F26376;
+    color: $ColorObjectSite;
     text-decoration: none;
     margin-bottom: 61px;
     display: flex;
@@ -122,7 +176,7 @@ a{
     
     &_ref{
         padding: 14px 39px;
-        border: 1px solid #FF6A6A;
+        border: 1px solid $ColorObjectSite;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
@@ -132,7 +186,7 @@ a{
  .footer_box:hover .footer_ref{  
     transition: 0.5s;
     color: white;
-    background: #F16D7F;
+    background: $ColorObjectSite;
    }
    .site_footer{
     &_goods_info{
@@ -215,7 +269,7 @@ a{
         border: none;
         border-radius: 0 15px 15px 0;
         height: 50px;
-        background: #E05C6E;
+        background: $ColorObjectSite;
         color: #FFFFFF;
         padding: 7px;
       }
@@ -246,7 +300,7 @@ a{
             justify-content: center;
             
             &:hover{
-                background: #F16D7F;
+                background: $ColorObjectSite;
               }
             &:hover > a > svg > path{
                 fill:white
