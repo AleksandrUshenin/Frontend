@@ -440,4 +440,104 @@ li {
   justify-content: space-around;
   flex-direction: row;
   width: 100%;
+}
+.product_image {
+  margin-bottom: 41px;
+}
+.product .product_info:before {
+  content: "";
+  display: block;
+  height: 65px;
+  width: 71%;
+  left: 14.3%;
+  right: auto;
+  background-color: white;
+  position: absolute;
+  top: -65px;
+  z-index: 2;
+}
+.product_info {
+  background-color: white;
+  width: 100%;
+  position: relative;
+}
+.product_info_box_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product_info_box_top h3 {
+  color: #F16D7F;
+  padding-bottom: 27px;
+}
+.product_info_box_top_border1 {
+  width: 63px;
+  border: 3px solid #F16D7F;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 12px;
+}
+.product_info_box_top h1 {
+  color: #F16D7F;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  padding-bottom: 65px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+.product_info_box_top_border2 {
+  width: 641px;
+  border: 1px solid #EAEAEA;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 65px;
+}
+.product_info_box_top h2 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4D4D4D;
+  margin-bottom: 48px;
+}
+.product_info_box_top span {
+  width: 555px;
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #5E5E5E;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+}
+.product_info_box_top_menu {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 49px;
+}
+.product_info_box_top_button {
+  border: 1px solid #F16D7F;
+  margin-bottom: 65px;
+}
+.product_info_box_top_button:hover {
+  transition: 0.5s;
+  background: #F16D7F;
+}
+.product_info_box_top_button:hover a, .product_info_box_top_button:hover a svg > path {
+  color: white;
+  fill: white;
+}
+.product_info_box_top_button a {
+  padding: 15px 23px 15px 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F16D7F;
+}
+.product_info_box_top_button a svg {
+  margin-right: 23px;
 }/*# sourceMappingURL=styleS.css.map */
