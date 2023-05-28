@@ -16,6 +16,10 @@ li {
   /* Убираем маркеры */
 }
 
+.details_triangle summary {
+  list-style: none;
+}
+
 .text {
   display: flex;
   flex-direction: column;
@@ -441,8 +445,14 @@ li {
   flex-direction: row;
   width: 100%;
 }
+.product_head .header_search_right a:last-child {
+  color: #F16D7F;
+}
 .product_image {
   margin-bottom: 41px;
+}
+.product .header_search_left a {
+  color: #F16D7F;
 }
 .product .product_info:before {
   content: "";
@@ -540,4 +550,106 @@ li {
 }
 .product_info_box_top_button a svg {
   margin-right: 23px;
+}
+
+.goods_filter {
+  height: 123px;
+  position: relative;
+}
+
+.filter_object {
+  grid-template-columns: 27% 45%;
+  display: grid;
+  gap: 30px;
+  box-sizing: border-box;
+  padding-left: 12%;
+  padding-top: 39px;
+  color: #6F6E6E;
+}
+
+.filter_left {
+  padding-top: 13px;
+  padding-left: 16px;
+  width: 360px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+}
+.filter_left[open] > summary {
+  color: #F16D7F;
+}
+.filter_left[open] {
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.filter_left[open] path {
+  fill: #F16D7F;
+}
+.filter_left details a {
+  display: block;
+}
+.filter_left_filter[open] > summary {
+  color: #F16D7F;
+}
+.filter_left_filter > summary {
+  display: block;
+  margin-top: 16px;
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 5px solid #F16D7F;
+  min-height: 37px;
+  padding-left: 11px;
+  padding-top: 11px;
+}
+.filter_left_filter:last-child {
+  margin-bottom: 16px;
+}
+.filter_left_filter li {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 34px;
+}
+.filter_left_filter li a {
+  padding-bottom: 11px;
+  color: #6F6E6E;
+}
+.filter_left_filter li a:hover {
+  color: #F16D7F;
+}
+.filter_left_filter li a:last-child {
+  padding-bottom: 0;
+}
+
+.filter_right {
+  display: grid;
+  grid-template-columns: 30% 15% 15%;
+  gap: 28px;
+}
+.filter_right .filter_item2 > .details_right > .blok {
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding-top: 9px;
+  padding-left: 9px;
+  padding-bottom: 12px;
+  width: 40px;
+}
+.filter_right .details_right {
+  padding-top: 13px;
+  padding-left: 18px;
+}
+.page_selector {
+  display: flex;
+  justify-content: center;
+}
+.page_selector a {
+  color: #6F6E6E;
+  padding-right: 18px;
+}
+.page_selector a:hover path {
+  fill: #F16D7F;
+}
+.page_selector a:last-child {
+  padding-right: 0;
+}
+.page_selector a:hover {
+  color: #F16D7F;
 }/*# sourceMappingURL=styleS.css.map */

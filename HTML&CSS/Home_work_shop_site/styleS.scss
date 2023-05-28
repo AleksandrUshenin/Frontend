@@ -13,6 +13,9 @@ a{
   list-style-type: none;
   /* Убираем маркеры */
 }
+.details_triangle summary{
+  list-style: none;
+}
 .text{
     display: flex;
     flex-direction: column;
@@ -440,9 +443,16 @@ a{
         justify-content: space-around;
         flex-direction: row;
         width: 100%;
+
+        .header_search_right a:last-child{
+          color: $ColorObjectSite;
+        }
     }
     &_image{
       margin-bottom: 41px;
+    }
+    .header_search_left a{
+      color: $ColorObjectSite;
     }
     .product_info:before{
       content: "";
@@ -545,5 +555,116 @@ a{
             margin-right: 23px;
           } 
         }
+    }
+  }
+  .goods_filter{
+    height: 123px;
+    position: relative;
+  }
+  .filter_object{
+    grid-template-columns: 27% 45%;
+    display: grid;
+    gap: 30px;
+    box-sizing: border-box;
+    padding-left: 12%;
+    padding-top: 39px;
+    color: #6F6E6E;
+  }
+  .filter_left{
+    padding-top: 13px;
+    padding-left: 16px;
+    width: 360px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+
+    &[open] > summary{
+      color: $ColorObjectSite;
+    }
+    &[open]{
+      background: #FFFFFF;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+    &[open] path{
+      fill: $ColorObjectSite;
+    }  
+    
+    & details a {
+      display: block;
+    }
+    &_filter{
+      &[open] > summary {
+        color: $ColorObjectSite;
+      }
+    }
+    &_filter > summary{
+      display: block;
+      margin-top: 16px;
+      border-bottom: 1px solid #EBEBEB;
+      border-left: 5px solid $ColorObjectSite;
+      min-height: 37px;
+      padding-left: 11px;
+      padding-top: 11px;
+    }
+    &_filter:last-child{
+      margin-bottom: 16px;
+    }
+    &_filter li{
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-left: 34px;
+
+      & a {
+        padding-bottom: 11px;
+        color: #6F6E6E;
+      }
+      & a:hover {
+        color: $ColorObjectSite;
+      }
+      & a:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+  }
+  .filter_right{
+    display: grid;
+    grid-template-columns: 30% 15% 15%;
+    gap: 28px;
+
+    .filter_item2 > .details_right > .blok{
+      background: #FFFFFF;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      padding-top: 9px;
+      padding-left: 9px;
+      padding-bottom: 12px;
+      width: 40px;
+    }
+
+    .details_right{
+      padding-top: 13px;
+      padding-left: 18px; 
+    }
+
+    & details[open]{
+      // background: #FFFFFF;
+      // box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+  }
+  .page_selector{
+    display: flex;
+    justify-content: center;
+    & a{
+      color: #6F6E6E;      
+      padding-right: 18px;
+    }
+    & a:hover path{
+      fill: $ColorObjectSite; 
+    }
+    & a:last-child{
+      padding-right: 0;
+    }
+    & a:hover{
+      color: $ColorObjectSite;      
     }
   }
