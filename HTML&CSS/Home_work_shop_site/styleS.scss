@@ -668,3 +668,189 @@ a{
       color: $ColorObjectSite;      
     }
   }
+  .top_content_head{
+    background: #F8F3F4;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: $ColorObjectSite;
+    height: 148px;
+    display: flex;
+    align-items: center;
+    padding-left: 230px;
+  }
+  .cart{
+    display: flex;
+    justify-content: center;
+    gap: 129px;
+    padding-top: 96px;
+
+    &_left{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .cart_left_item{
+        min-height: 300px;
+        display: flex;
+        box-shadow: 20px 20px 20px 0px rgba(1, 0, 0, 0.21);
+        margin-bottom: 40px;
+        width: 600px;
+        height: 306px;
+
+        .info{
+
+          .info_head{
+            grid-template-columns: 60% 10%;
+            display: grid;
+            align-items: center;
+            gap: 88px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 29px;
+            padding-top: 25px;
+            padding-left: 31px;
+            padding-bottom: 42px;
+            
+            & h1{
+              font-family: 'Lato';
+              font-style: normal;
+            }
+          }
+          .info_data{
+            padding-left: 31px;
+            gap: 6px;
+          }
+          .box_style{
+            margin-left: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+          .cart_left_buttons{
+            .cart_left_button{
+              border: 1px solid #A4A4A4;
+              color: #000000;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+        }
+      }
+      .cart_left_buttons{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 72px;
+        padding-bottom: 128px;
+
+        .cart_left_button{
+          border: 1px solid #A4A4A4;
+          font-family: 'Lato';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 17px;
+          padding: 16px 40px;
+        }
+      }
+    }
+    &_right{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .cart_right{
+        
+        .cart_right_top{
+          display: flex;
+
+          &_head{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 21px;
+          }
+          .buy_form{
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+  .color{
+    color: $ColorObjectSite;
+  }
+  .box{
+    border: 1px solid #EAEAEA;
+  }
+  .font{
+    font-family: 'Lato';
+    font-style: normal;
+    //font-size: 14px;
+    //line-height: 17px;
+  }
+  .input_form{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 21px;
+  }
+  .buy_button{
+    background: #FFFFFF;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    border: 1px solid #A4A4A4;
+    padding: 10px 15px;
+    margin-bottom: 57px;
+  }
+  .cart_right_bottom{
+    background: #F5F3F3;
+    padding: 0 43px;
+    min-height: 200px;
+  }
+  .cart_right_bottom_info{
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 60% 20%;
+    grid-template-rows: 30% 30%;
+    padding-top: 39px;
+    justify-content: end;
+    //padding-bottom: 21px;
+  }
+  .cart_right_bottom_info_font1{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .cart_right_bottom_info_font2{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .cart_right_bottom_button{
+    border-block-start: solid; 
+    border-block-start-color: #E2E2E2;
+    //writing-mode: horizontal-tb;
+    //width: 100%;
+    //height: 100%;
+  }
+  .cart_right_bottom_button_ref{
+    display: block;
+    background: #F16D7F;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 16px 42px;
+    margin-top: 17px;
+    margin-bottom: 42px;
+  }
+  .cart_right_top_head{
+    padding-bottom: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
