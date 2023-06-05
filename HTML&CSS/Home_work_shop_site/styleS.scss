@@ -854,3 +854,69 @@ a{
     font-size: 16px;
     line-height: 19px;
   }
+  .test2{
+    min-height: 100px;
+  }
+  .regisration_box{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 128px;
+    margin-top: 64px;
+    margin-bottom: 96px;
+    //width: 80%;
+
+    &_left{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .style_par{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+      }
+      .regisration_button{
+        color:white;
+        background-color: $ColorObjectSite;
+        padding: 17px 20px;
+        width: 30%;
+      }
+    }
+    &_right{
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+    }
+    .style_regisration_box{
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .li_style{
+      list-style-image:url(img/Vector_V.svg);
+      padding-left: 25px;
+    }
+  }
+  .center{
+    padding-left: 16%;
+    padding-right: 16%;
+}
+  .label_box{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: 0;
+  align-items: normal;
+}
+.label{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}

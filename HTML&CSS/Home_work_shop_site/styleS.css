@@ -832,4 +832,72 @@ li {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
+}
+
+.test2 {
+  min-height: 100px;
+}
+
+.regisration_box {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 128px;
+  margin-top: 64px;
+  margin-bottom: 96px;
+}
+.regisration_box_left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.regisration_box_left .style_par {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+}
+.regisration_box_left .regisration_button {
+  color: white;
+  background-color: #F16D7F;
+  padding: 17px 20px;
+  width: 30%;
+}
+.regisration_box_right {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.regisration_box .style_regisration_box {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+.regisration_box .li_style {
+  list-style-image: url(img/Vector_V.svg);
+  padding-left: 25px;
+}
+
+.center {
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+.label_box {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: 0;
+  align-items: normal;
+}
+
+.label {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
 }/*# sourceMappingURL=styleS.css.map */
