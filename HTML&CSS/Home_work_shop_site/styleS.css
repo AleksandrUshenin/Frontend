@@ -856,6 +856,13 @@ li {
   .filter_left {
     width: 180px;
   }
+  .goods:last-child {
+    display: none;
+  }
+  .product .product_info:before {
+    width: 100%;
+    left: 0;
+  }
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .header {
@@ -933,5 +940,9 @@ li {
   }
   .filter_left {
     width: 90px;
+  }
+  .product .product_info:before {
+    width: 100%;
+    left: 0;
   }
 }/*# sourceMappingURL=styleS.css.map */
