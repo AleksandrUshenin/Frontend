@@ -872,6 +872,9 @@ a{
  .regisration_box {
   gap: 25px;
  }
+ .filter_left{
+  width: 180px;
+ }
 }
  @media (min-width: 320px) and (max-width: 767px){
   .header{
@@ -948,5 +951,8 @@ a{
  }
  .regisration_box{
   grid-template-columns: 100%;
+ }
+ .filter_left{
+    width: 90px;
  }
 }
