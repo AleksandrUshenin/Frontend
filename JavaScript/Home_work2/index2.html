@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h2>
+		Hello World!
+	</h2>
+	<script>
+		let num1 = prompt('введите');
+		let num2 = prompt('введите');
+		console.log(num1 <= 1);
+		console.log(num2 >= 3);
+		
+		let test = true;
+		console.log((test === true) ? '+++' : '---');
+		
+		let day = 27;
+		if (day < 11){
+			alert('1 декада');
+		} else if (day > 10 && day < 21){
+			alert('2 декада');
+		}
+		else{
+			alert('3 декада');
+		}
+		
+		let b = prompt();
+		let a = b;
+		if (a > 999){
+			a = a % 1000;
+		}
+		alert(`В числе ${b} 'количекство сотен ${(a - a % 100) / 100}, десятков ${(a - a % 10) % 100 / 10}, едениц ${a % 100 % 10 }`);
+		
+	</script>
+</body>
+</html>
