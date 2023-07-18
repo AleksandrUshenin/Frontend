@@ -815,6 +815,10 @@ li {
   line-height: 29px;
 }
 
+.img_item > img {
+  height: 100%;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .header {
     justify-content: space-between;
