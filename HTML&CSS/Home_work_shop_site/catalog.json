@@ -22,5 +22,29 @@
         "color": "Blue",
         "size": "L",
         "quantity": "2"
+    },
+    {
+        "name": "ELLERY X M'O CAPSULE",
+        "image": "img/men_item5.png",
+        "price": "120",
+        "color": "White",
+        "size": "L",
+        "quantity": "1"
+    },
+    {
+        "name": "ELLERY X M'O CAPSULE",
+        "image": "img/men_item6.png",
+        "price": "220",
+        "color": "White",
+        "size": "M",
+        "quantity": "1"
+    },
+    {
+        "name": "ELLERY X M'O CAPSULE",
+        "image": "img/img/item2.png",
+        "price": "420",
+        "color": "Black",
+        "size": "M",
+        "quantity": "1"
     }
 ]
