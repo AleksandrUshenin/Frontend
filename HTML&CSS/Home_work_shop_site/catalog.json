@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "name": "MANGO PEOPLE T-SHIRT",
         "image": "img/cart1.png",
         "price": "300",
@@ -8,6 +9,7 @@
         "quantity": "2"
     },
     {
+        "id": "2",
         "name": "MANGO PEOPLE T-SHIRT",
         "image": "img/cart2.png",
         "price": "330",
@@ -16,6 +18,7 @@
         "quantity": "2"
     },
     {
+        "id": "3",
         "name": "ELLERY X M'O CAPSULE",
         "image": "img/item4.png",
         "price": "520",
@@ -24,6 +27,7 @@
         "quantity": "2"
     },
     {
+        "id": "4",
         "name": "ELLERY X M'O CAPSULE",
         "image": "img/men_item5.png",
         "price": "120",
@@ -32,6 +36,7 @@
         "quantity": "1"
     },
     {
+        "id": "5",
         "name": "ELLERY X M'O CAPSULE",
         "image": "img/men_item6.png",
         "price": "220",
@@ -40,8 +45,9 @@
         "quantity": "1"
     },
     {
+        "id": "6",
         "name": "ELLERY X M'O CAPSULE",
-        "image": "img/img/item2.png",
+        "image": "img/item2.png",
         "price": "420",
         "color": "Black",
         "size": "M",

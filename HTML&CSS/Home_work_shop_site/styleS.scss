@@ -835,6 +835,37 @@ a{
 .img_item > img{
   height:  100%;
 }
+.box_img_btn{
+  position: relative;
+}
+.box_img_btn:hover{
+  display: block; 
+  //background: rgba(0, 0, 0, 0.9);
+}
+.btn{
+  position: absolute;
+  width: 100%;
+  left:0;
+  top: 50%; /* Отступ сверху */
+  text-align: center;
+  opacity: 0;
+  //transition: opacity .35s ease;
+}
+.btn a{
+  padding: 15px 40px; /* Отступ */
+  text-align: center;
+  // background: white; /* Цвет кнопки */
+  color: white; /* Цвет текста */
+  border: 1px solid white; /* Ширина, стиль и цвет границы */
+  z-index: 1; 
+}
+.box_img_btn:hover .btn{
+  opacity: 1;
+  //filter:brightness(40%);
+}
+.box_img_btn:hover .goods_image{
+  filter:brightness(40%);
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .header {
