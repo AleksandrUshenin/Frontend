@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid grey;
+}
+.font{
+    size: 10px;
+}
+.info_head{
+    display: flex;
+    gap: 20px;
+}
