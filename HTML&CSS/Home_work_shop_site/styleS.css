@@ -724,8 +724,7 @@ li {
 }
 
 .cart_right_bottom_button {
-  -webkit-border-before: solid;
-          border-block-start: solid;
+  border-block-start: solid;
   border-block-start-color: #E2E2E2;
 }
 

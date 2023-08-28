@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="HW_1_style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <div id="box">
+        <button class="btn" v-on:click="message_click">{{ message }}</button>
+    </div>
+    <hr>
+    <div id="list-rendering">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+        <button class="btn" v-on:click="click_btn">Добавить</button>
+        <button class="btn" v-on:click="click_btn_del">Удалить</button>
+      </div>
+    <script src="HW_2_script.js"></script>
+</body>
+</html>
