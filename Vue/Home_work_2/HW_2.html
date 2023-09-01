@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="HW_2.css">
+</head>
+<body>
+    <div id="box">
+        <ol>
+            <li class="li_box" v-for="product in products">
+              Name: {{ product.name }} ---------  Prise: {{ product.prise }}p.
+              <img class="img" :src="product.photo" alt="goods">
+            </li>
+        </ol>
+          <button v-on:click="sort_up" class="button">Сортировка по возрастанию</button>
+          <button v-on:click="sort_down" class="button">Сортировка по убыванию</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="HW_2.js"></script>
+</body>
+</html>

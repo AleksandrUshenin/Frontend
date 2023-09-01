@@ -23,6 +23,7 @@ $color_paragraph_text:#4D5053;
 }
 a{
     text-decoration: none;
+    color: black;
 }
 .blok_head{
     font-family: DM Serif Display;
@@ -164,6 +165,60 @@ a{
         width: 55%;
     }
 }
+.baner_Blog_page{
+    background-image:url(img/banner_blog.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 270px;
+    margin-top: 45px;
+
+    .box_banner{
+        background-color: white;
+        padding: 41px 78px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: $radius_button $radius_button 0 0;
+    }
+}
+.latest_post{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+
+    &_head{
+        display: flex;
+        width: 75%;
+        justify-content: flex-start;
+   }
+    &_box{
+        display: flex;
+        align-items: center;
+        gap: 65px;
+
+        &_text{
+            & > p{
+                margin-top: 22px;
+            }
+        }
+        &_img > img{
+            border-radius: $radius_box;
+        }
+    }
+    &_button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 41px;
+    }
+}
 .projects{
     margin-top: 96px;
     display: flex;
@@ -275,12 +330,17 @@ a{
         display: flex;    
         flex-direction: column;
         align-items: center;
+        
+        &_left_position{
+            align-items: flex-start;
+        }
     }
     &_items{
         margin-top: 52px;
-        display: flex;
+        display: grid;
         justify-content: center;
         gap: 27px;
+        grid-template-columns: 33% 33% 33%;
     }
     &_item{
         border: 1px solid #E7E7E7;
@@ -290,13 +350,14 @@ a{
         
         &_img{
             border-radius: $radius_box $radius_box 0 0;
+            width: 100%;
         }
-        &_color{
-            background-color: $color_couter;
-        }
-        &:nth-child(2) > .blog_button > a > svg > circle{
-            fill: #FFFFFF;
-        }
+    }
+    &_item:hover{
+        background-color: $color_couter;
+        &> .blog_button > a > svg > circle{
+                fill: #FFFFFF;
+            }
     }
     &_button{
         display: flex;
@@ -350,4 +411,20 @@ a{
 .social_media{
     display: flex;
     gap: 54px;
+}
+
+.pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 51px;
+}
+.page{
+    padding: 14px 17px;
+    border-radius: $radius_box;
+    border: 1px solid #CDA274;
+}
+.page:last-child{
+    padding: 0;
 }
