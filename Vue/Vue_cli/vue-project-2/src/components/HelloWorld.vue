@@ -17,30 +17,13 @@
         <a class="head_right_ref" href="#">Blog</a>
       </div>
     </div>
-    <div class="">
-      <div class="baner_Blog_details_page">
-        <img src="../assets/img/Blog_details_img.png" alt="img">
-      </div>
-    </div>
-    <div id="filter_blog" class="blog">
-      <div class="blog_box">
-        <div class="blog_box_items">
-          <div class="blog_box_item" v-for="item in items_blog" :key="item.id">
-            <!-- {{ item }} -->
-            <img class="img_blog" :src=item.img alt="blog-img">
-            <h1>{{ item.titel }}</h1>
-            <p>{{ item.text }}</p>
-            <p>{{ item.tag }}</p>
-          </div>
-        </div>
-        <div class="blog_box_button">
-          <button @click="clik('Kitchen')">Kitchen</button>
-          <button @click="clik('Bedroom')">Bedroom</button>
-          <button @click="clik('Building')">Building</button>
-          <button @click="clik('Architecture')">Architecture</button>
-          <button @click="clik('Kitchen')">Kitchen Planning</button>
-          <button @click="clik('Bedroom')">Bedroom</button>
-          <button @click="clik('')">Reset</button>
+    <div class="content">
+      <div class="box_in_content">
+        <div class="index" v-for="(product, index) in products" :key="index">
+          name : {{ product.name }}
+          price : {{ formattedPrice(product.price) }}
+          status : {{ status(product.available) }}
+          <img class="img_poduct" :src="product.img" alt="img">
         </div>
       </div>
     </div>
@@ -75,7 +58,7 @@
       <div class="footer_box">
         <h2 class="mini_head">Pages</h2>
         <a href="#">Home</a>
-        <a href="./ProductDetails.html">Project</a>
+        <a href="#">Project</a>
         <a href="#">Blog</a>
       </div>
       <div class="footer_box">
@@ -94,68 +77,169 @@ export default {
   props: {
     msg: String
   },
-  data: function () {     //data()
-        return {
-            count: 0,
-            items_blog2: [
-                {
-                    id: 1,
-                    img: "../assets/img/Kitchen_1.jpg",
-                    titel: 'Lorem ipsum dolor sit amet.',
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsa!',
-                    tag: 'Kitchen'
-                },
-                {
-                    id: 2,
-                    img: '../assets/img/Bedroom_1.jpg',
-                    titel: 'Lorem ipsum dolor sit amet.',
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsa!',
-                    tag: 'Bedroom'
-                },
-                {
-                    id: 3,
-                    img: '../assets/img/Building_1.jpg',
-                    titel: 'Lorem ipsum dolor sit amet.',
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsa!',
-                    tag: 'Building'
-                },
-                {
-                    id: 4,
-                    img: '../assets/img/Architecture_1.jpg',
-                    titel: 'Lorem ipsum dolor sit amet.',
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsa!',
-                    tag: 'Architecture'
-                },
-                {
-                    id: 5,
-                    img: '../assets/img/Bedroom_1.jpg',
-                    titel: 'Lorem ipsum dolor sit amet.',
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsa!',
-                    tag: 'Bedroom'
-                },
-                {
-                    id: 6,
-                    img: '../assets/img/Building_1.jpg',
-                    titel: 'Lorem ipsum dolor sit amet.',
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsa!',
-                    tag: 'Building'
-                }
-            ],
-            filt: ''
+  data() {
+    return {
+      products: [
+        {
+          name: 'Умная колонка',
+          price: 10,
+          available: false,
+          img: 'https://avatars.mds.yandex.net/get-mpic/1866031/img_id1617134124012710900.jpeg/orig'
+        },
+        {
+          name: 'Мягкая игрушка милый кавайный Кот- акула',
+          price: 20,
+          available: true,
+          img: 'https://avatars.mds.yandex.net/get-mpic/4497593/img_id5194758694289069105.png/orig'
+        },
+        {
+          name: 'Картина по номерам на холсте грустный уставший толстый кот мем',
+          price: 30,
+          available: false,
+          img: 'https://avatars.mds.yandex.net/get-mpic/5221441/img_id4079126891707268213.jpeg/orig'
+        },
+        {
+          name: 'Значок',
+          price: 40,
+          available: true,
+          img: 'https://avatars.mds.yandex.net/get-mpic/5251330/img_id5397124913501449480.jpeg/orig'
         }
-    },
-    computed: {
-        items_blog() {
-            return this.items_blog2.filter(item => item.tag.includes(this.filt));
-        }
-    },
-    methods: {
-        clik(filter) {
-            this.filt = filter;
-        }
+      ]
     }
+  },
+  methods: {
+    formattedPrice(prise) {
+      // return '$'+ prise;
+      return '$' + prise;
+    },
+    status(stat) {
+      if (stat == false) {
+        return 'Out of stock';
+      }
+      else {
+        return 'Available';
+      }
+    }
+  },
+  computed: {
+    // formattedPrice: function(prise){
+    //   // return '$'+ prise;
+    //   return 10000;
+    // }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src="../../../../project_site/style.css"></style>
+<style scoped>
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-family: "Jost", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.blok_head {
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 63px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #292F36;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 44px;
+}
+
+.head_right {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.head_right_ref {
+  font-family: Jost;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #292F36;
+  margin-right: 30px;
+}
+
+.head_right_ref:last-child {
+  margin-right: 0;
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 27% 27% 27%;
+  margin-top: 96px;
+  margin-bottom: 100px;
+}
+
+.footer_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer_box>p {
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #4D5053;
+}
+
+.footer_box>a {
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #4D5053;
+}
+
+.content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.box_in_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 70vw;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.img_poduct {
+  width: 20%;
+}
+</style>
