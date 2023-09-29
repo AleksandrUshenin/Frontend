@@ -28,7 +28,7 @@
     <div class="categoreis">
       <div class="swich_box">
         <div class="swich_categories">
-          <button @click='click_button(btn.name, index)' v-for="(btn, index) in buttons" :key="index" class="btn"
+          <button @click='click_button(btn.name, index)' v-for="(btn, index) in load_buttons" :key="index" class="btn"
             v-bind:class="{ active: btn.isActive }">
             {{ btn.name }}
         </button>
@@ -97,7 +97,6 @@ export default {
   },
   data() {
     return {
-      buttons2: ['Bathroom', 'Bed Room', 'Kitchan', 'Living Area'],
       buttons: [
         { name: 'Bathroom', isActive: false },
         { name: 'Bed Room', isActive: false },
@@ -120,6 +119,9 @@ export default {
   computed: {
     load_data() {
       return this.content_categories.filter(item => item.categories.includes(this.filt));
+    },
+    load_buttons(){
+      return this.buttons;
     },
     filterStyle() {
       if (this.show) {
