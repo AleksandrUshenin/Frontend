@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <div class="box">
+        <div id="list-rendering">
+            <p>Введите отзыв:</p>
+            <input v-model="dataText" id="from" type="text">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+            <button class="btn" v-on:click="click_btn">Добавить</button>
+            <button class="btn" v-on:click="click_btn_del">Удалить</button>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+
+</html>
