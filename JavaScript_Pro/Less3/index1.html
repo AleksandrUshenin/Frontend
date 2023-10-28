@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <div class="box">
+        <p>Товары: </p>
+        <ol>
+            <li v-for="(todo, index) in todos" :key="index">
+                <a v-on:click="click_ref(index)" href="index2.html">{{ todo.text }}</a>
+            </li>
+        </ol>
+    </div>
+    <script src="script1.js"></script>
+</body>
+<style>
+</style>
+</html>
