@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание занятий</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <div class="box">
+        <p>Расписание занятий:</p>
+        <div class="items">
+            <p>Занятие</p>
+            <p>Дата</p>
+            <p>Количество</p>
+        </div>
+        <div class="content">
+            <div class="for" v-for="(item, keyI) in schedule" :key="keyI">
+                <p>{{ item.name }}</p>
+                <p>{{ item.date }}</p>
+                <p>{{ item.max_count }} / {{ item.count }}</p>
+                <div class="button">
+                    <button @click="ckick_add(keyI)" class="add">Записаться</button>
+                    <button  @click="ckick_del(keyI)" class="del" disabled="true">Отменить запись</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .items{
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+        }
+        .content{
+            display: grid;
+            grid-template-rows: auto;
+        }
+        .for{
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+        }
+        .button{
+            display: flex;
+        }
+    </style>
+</body>
+</html>
