@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <div class="box">
+        <div class="buttons">
+            <button class="button button_previous">< Предыдущее изображение</button>
+            <button class="button button_next">Следующее изображение ></button></button>
+        </div>
+        <div class="img_box" style="background-color: orange; min-width: 100px; min-height: 100px;">
+            <img class="img" src="#" alt="">
+        </div>
+        <nav class="nav">
+            <div v-for="(item, index) in pages" :key="index">
+                <button class="button_nav">
+                    {{ index + 1 }}
+                </button>
+            </div>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .buttons{
+            padding-top: 120px;
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+        }
+        .button{
+            width: 120px;
+            height: 50px;
+            border-radius: 20%;
+        }
+        .nav{
+            display: flex;
+            gap: 20px;
+        }
+        .button_nav{
+            border-radius: 50%;
+            min-width: 30px;
+            min-height: 30px;
+        }
+        .img_box{
+            display: flex;
+            justify-content: center;
+        }
+        .img{
+            max-width: 60%;
+            max-height: 60%;
+        }
+    </style>
+</body>
+</html>
