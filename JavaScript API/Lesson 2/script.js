@@ -33,6 +33,6 @@ const app = {
                 document.querySelector('.img').src = this.pages[this.page].src;   
             });
         });
-    },
+    }
 };
 Vue.createApp(app).mount('.nav');
